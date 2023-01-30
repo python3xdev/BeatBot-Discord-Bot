@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import youtube_dl
 from datetime import timedelta
+import os
 
 
 bot = commands.Bot(activity=discord.Game(name='24/7 Chill Lofi Music'), command_prefix='/', intents=discord.Intents.all())
