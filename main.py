@@ -80,7 +80,7 @@ async def play(interaction: discord.Interaction, loop: int, url: str):
 			main_info['view_count'] = info['view_count']
 			main_info['thumbnail'] = info['thumbnail']
 
-			source = await discord.FFmpegOpusAudio.from_probe(source=main_info['audio_url'], executable='ffmpeg/ffmpeg.exe', **FFMPEG_OPTIONS)
+			source = await discord.FFmpegOpusAudio.from_probe(source=main_info['audio_url'], **FFMPEG_OPTIONS)
 			audio_stream.play(source)
 
 		embed = discord.Embed(
